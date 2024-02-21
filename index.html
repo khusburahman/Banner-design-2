@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-1 bridge code</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/fonts/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="overly">
+        <h1>burger shop</h1>
+    </div>
+    <header>
+        <div class="logo">
+            Food <span>Point</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <i class="bi bi-list" id="toggle"></i>
+    </header>
+
+
+    <section class="Home">
+        <div class="content-bx">
+            <h3>Discover new taste in every bite</h3>
+            <h2>Delicious Burger</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae magnam magni natus, inventore quam distinctio aliquam aut quisquam quos debitis quaerat accusantium qui fugit temporibus! Similique beatae reprehenderit voluptate? Debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum minima accusamus perspiciatis! Magni, aliquid.</p>
+            <button>Order Now</button>
+            <div class="social-box">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="img-box">
+            <img src="assets/images/burger1-removebg-preview.png" alt="">
+        </div>
+    </section>
+    <script>
+        const toggle=document.getElementById('toggle');
+const menu=document.querySelector('.menu');
+
+toggle.onclick=function(){
+    menu.classList.toggle('active')
+}
+gsap.from('img',1.2,{opacity:0,x:300,delay:0.3})
+gsap.from('h3',1.2,{opacity:0,y:-100,delay:0.6})
+gsap.from('button',1.2,{opacity:0,y:100,delay:0.9})
+gsap.from('h2',1.2,{opacity:0,x:-300,delay:0.7})
+gsap.from('p',1.2,{opacity:0,x:-300,delay:0.8})
+gsap.from('.social-box',1.2,{opacity:0,y:-150,delay:1})
+gsap.from('header',1.2,{opacity:0,y:-80,delay:0.5})
+gsap.from('overly',1.2,{opacity:0,y:0,delay:0.3})
+    </script>
+    
+
+
+   <!----
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    --->
+</body>
+</html>

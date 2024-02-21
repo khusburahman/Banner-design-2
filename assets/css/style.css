@@ -1,0 +1,327 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Open+Sans&family=Oswald&family=Poppins:wght@300;500&family=Roboto:ital@0;1&family=Sofia+Sans+Condensed&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins",sans-serif;
+  }
+  body{
+    min-height: 100vh;
+    min-width: 400px;
+    overflow: hidden;
+    background: #172b44;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5%;
+    color: #172b44;
+    height: 80px;
+    width: 100%;
+    background-color: #112031;
+    z-index: 1;
+    
+  }
+
+  header .logo{
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 800;
+    color: #febd01;
+  }
+  header .logo span{
+    font-weight: 200;
+  }
+  header .menu{
+    display: flex;
+    align-items: center;
+  }
+  header .menu li a{
+    display: block;
+    text-align: center;
+    width: 110px;
+    height: 24px;
+    list-style: 20px;
+    color: #112031;
+    background: #febd01;
+    font-size: 700;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 15px 0 15px 0;
+    margin-left: 15px;
+    transition-property: background,color,border;
+    transition-duration: 0.4s;
+
+  }
+  header .menu li a:hover{
+    background: #112031;
+    color: #febd01;
+    border: 2px solid #febd01;
+  }
+
+  #toggle{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .overly{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .overly h1{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24vw;
+    font-weight: 900;
+    opacity: 0.03;
+    text-align: center;
+    line-height: 28vw;
+    transform: rotate(-5deg);
+  }
+
+
+  .Home{
+    padding: 5rem 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .Home .content-bx,
+  .Home .img-box{
+    width: 50%;
+    position: relative;
+  }
+  .Home .content-bx h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 4px;
+    letter-spacing: 5px;
+  }
+  .Home .content-bx h2{
+    font-family: 'chewy',sans-serif;
+    color: #febd01;
+    font-size: 4.4rem;
+    font-weight: 400;
+    margin: -5px 0 10px;
+  }
+  .Home .content-bx p{
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+  .Home .content-bx button{
+    outline:none;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid #febd01;
+    background: #febd01;
+    color: #172b44;
+    cursor: pointer;
+    transition-property: background,color;
+    transition-duration:0.4s;
+  }
+  .Home .content-bx button:hover{
+    background: transparent;
+    color: #febd01;
+  }
+  .Home .content-bx .social-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: -106%;
+    transform: translateY(-50%);
+  }
+
+  .Home .social-box::after{
+    position: absolute;
+    content: '';
+    background: #febd01;
+    width: 1px;
+    height: 120px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .Home .social-box::before{
+    position: absolute;
+    content: '';
+    background: #febd01;
+    width: 1px;
+    height: 120px;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .Home .social-box a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    background: #febd01;
+    color: #172b44;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #febd01;
+    transition: 0.4s;
+
+  }
+  .Home .social-box a:hover{
+    color: #febd01;
+    background: transparent;
+  }
+  .Home .img-box{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  
+  }
+  .Home .img-box img{
+    width: 100%;
+
+  }
+
+
+
+  @media(max-width:1004px){
+    header .menu li a{
+        font-size: 0.88rem;
+        width: 95px;
+    }
+    .Home .content-bx h3{
+        font-size: 0.75rem;
+    }
+    .Home .content-bx h2{
+        font-size: 3.75rem;
+    }
+    .Home .content-bx p{
+        font-size: 0.75rem;
+    }
+}
+@media(max-width:900px){
+    header .logo{
+        letter-spacing: -1px;
+        font-size: 1.88rem;
+    }
+    header .menu li a{
+        font-size: 0.75rem;
+        width: 80px;
+
+    }
+    .Home .content-bx h3{
+        letter-spacing: 3px;
+    }
+    .Home .content-bx h2{
+        font-size: 3.12rem;
+    }
+    .home .content-bx p{
+        font-size: 0.7rem;
+        margin-bottom: 20px;
+    }
+    .Home .content-bx button{
+        font-size: 0.8rem;
+        padding: 0.25rem 0.8rem;
+    }
+}
+@media(max-width:768px){
+  #toggle{
+    display: block;
+    color: #febd01;
+    mix-blend-mode: difference;
+  }
+  header{
+    height: 60px;
+  }
+  header .menu{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left:-100%;
+    top: 0px;
+    background:#febd01;
+    width: 100%;
+    height: 100vh;
+    transition: 0.4s;
+  }
+  header .menu.active{
+    left: 0%;
+  }
+
+  header .menu li{
+    width: 100%;
+    padding: 0 5%;
+  }
+  header .menu li a{
+    width: 100%;
+    height: 80px;
+    line-height: 2.25rem;
+    font-weight: 800;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  header .menu li a:hover{
+    background: #172b44;
+    color: #febd01;
+  }
+  .Home{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    row-gap: 20px;
+  }
+  .home .content-bx{
+    width: 100%;
+    text-align: center;
+  }
+  .Home .img-box{
+    width: 100%;
+    justify-content: center;
+    z-index: -1;
+  }
+  .Home .content-bx .social-box{
+    flex-direction: row;
+    justify-content: center;
+    top: 118%;
+    right: 0%;
+    width: 100%;
+
+  }
+  .Home .social-box::after,
+  .Home .social-box::before{
+    height: 0px;
+  }
+  .Home .social-box a{
+    margin: 0 5px;
+  }
+}
